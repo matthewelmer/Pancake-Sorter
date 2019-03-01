@@ -37,15 +37,7 @@ root = Node([1, 3, 2, 4])
 explored_states = []  # all of the states that have already been explored
 queue = [root]  # where the nodes go in order to get processed. Use queue.pop(0).
 
-
-# n1 = root.add_node([3,1,2], 1, root)  # proving trace function works
-# n4 = n1.add_node([2,1,3], 2, n1)
-# n7 = n4.add_node([1,2,3], 1, n4)
-# n7.trace_to_root()
-# print(path)
-
-
-# pancake flip optimal path program
+# pancake flip optimal path program (should prolly make a function)
 best_state = root.state
 goal = [1, 2, 3, 4]
 while best_state != goal:
@@ -61,13 +53,3 @@ while best_state != goal:
             queue.append(result_node)
 
 # could do cleanup like queue = []
-
-
-# def result(cnode, a):  # Sournav's node creation
-#     temp_node = Node()
-#     temp_node.state = flip(cnode.state, a)  # I made my flip function work directly on the node
-#     temp_node.flip = a
-#     temp_node.parent = cnode
-#     cnode.children.append(temp_node)
-
-
